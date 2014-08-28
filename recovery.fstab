@@ -1,10 +1,21 @@
 # mount point	fstype    device    	[device2]
 
-/boot       mtd         boot
-/cache      yaffs2      cache
-/data       yaffs2      userdata
-/misc       mtd         misc
-/recovery   mtd         recovery
-/sdcard     vfat        /dev/block/mmcblk0p1        /dev/block/mmcblk0
-/system     yaffs2      system
-/sd-ext     ext4        /dev/block/mmcblk0p2
+#/boot	emmc	/dev/block/platform/sdhci-tegra.3/by-name/LNX
+#/cache      yaffs2      cache
+#/data       yaffs2      userdata
+#/misc       mtd         misc
+#/recovery   mtd         recovery
+#/sdcard     vfat        /dev/block/mmcblk0p1        /dev/block/mmcblk0
+#/system     yaffs2      system
+#/sd-ext     ext4        /dev/block/mmcblk0p2
+
+/recovery	emmc 	/dev/block/platform/sdhci-tegra.3/by-name/SOS 
+/boot		emmc 	/dev/block/platform/sdhci-tegra.3/by-name/LNX
+/system 	ext4 	/dev/block/platform/sdhci-tegra.3/by-name/APP
+/cache 		ext4 	/dev/block/platform/sdhci-tegra.3/by-name/CAC
+/misc 		emmc 	/dev/block/platform/sdhci-tegra.3/by-name/MSC 
+/data 		ext4 	/dev/block/platform/sdhci-tegra.3/by-name/UDA 
+/sdcard     	vfat    /dev/block/mmcblk1p1        /dev/block/mmcblk1
+/emmc 		vfat 	/dev/block/platform/sdhci-tegra.3/by-name/SDC
+/sd-ext     	ext4    /dev/block/mmcblk0p2
+

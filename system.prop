@@ -1,3 +1,103 @@
+ro.opengles.version = 131072
+wifi.interface=wlan0
+rild.libpath=/system/lib/libztetd-ril.so
+rild.libargs=-e wwan0 -e wwan0:0 -e wwan0:1
+ro.sf.lcd_density=240
+
+# for qq font camera.
+ro.qq.orientation=ZTE
+ro.qq.platform=NVIDIA
+
+# Icera fild
+modem.fild.rootdir=/data/rfs
+modem.fild.blocksize=65528
+modem.fild.baudrate=3500000
+modem.fild.hif=0
+modem.fild.coredump=enabled
+modem.fild.coredumpdir=/data/rfs/data/debug
+modem.power.device=/sys/class/gpio/gpio32/value,0,1
+ro.ril.devicename=/dev/ttyACM1
+modem.powercontrol=enabled
+
+
+# -----------------------------
+# speaker volume is from 20 to 31
+# this corresponds to -2dB to +8dB
+# -----------------------------
+audio.speaker.voice.0=20
+audio.speaker.voice.1=21
+audio.speaker.voice.2=24
+audio.speaker.voice.3=26
+audio.speaker.voice.4=28
+audio.speaker.voice.5=31
+# -----------------------------
+# earpiece volume is from 20 to 31
+# this corresponds to -2dB to +8dB
+# -----------------------------
+audio.earpiece.voice.0=20
+audio.earpiece.voice.1=21
+audio.earpiece.voice.2=24
+audio.earpiece.voice.3=26
+audio.earpiece.voice.4=28
+audio.earpiece.voice.5=31
+# -----------------------------------
+# headset volume is from 9 to 14
+# this corresponds to -34dB to -19dB
+# ----------------------------------
+audio.headset.voice.0=16
+audio.headset.voice.1=19
+audio.headset.voice.2=22
+audio.headset.voice.3=25
+audio.headset.voice.4=28
+audio.headset.voice.5=31
+persist.tegra.nvmmlite = 1
+
+#NFC
+debug.nfc.fw_download=false
+debug.nfc.se=false
+
+
+# add by zhaojin ++
+zte.service.gsmmuxd.enable=1
+zte.service.atcmdsrv.enable=1
+zte.service.usbcfgd.enable=1
+
+#add by huhaiqing@20130522 for modem firmware backup +++
+zte.service.amtbackup=0
+zte.service.mds=0
+zte.mds.finish=0
+ril.fwbackup.need=1
+zte.dead.num=0
+#add by huhaiqing@20130522 for modem firmware backup ---
+
+zte.is.phone=1
+zte.is.phonetype=u950
+zte.closeshutdown.animation=0
+#0 for normal mode, 1 for net mode, 2 for cmcc mode
+zte.compile.for.net=0
+apps.setting.product.release=ZTE U950V1.0.0B05
+ro.build.sw_internal_version=U950V1.0.1B01
+
+#zte hanguojun add for adjust default timezone to +08:00
+persist.sys.timezone=Asia/Shanghai
+
+ro.product.manufacturer=ZTE
+ro.product.model=ZTE U950
+
+persist.sys.logcat.debug=0
+
+# mtbf switch
+
+persist.sys.mtbf.debug=0
+#test
+persist.sys.nvlog=0
+
 #
-# system.prop for enterprise_U950
+# 592zn symbean 2013022515
 #
+#  !!!!注意，请不要修改这里，后果很严重.  (!!!!! Do not try to edit it.)
+#ro.build.display.bid=吾就爱智能论坛
+ro.build.display.bid=hehe
+
+ro.bq.gpu_to_cpu_unsupported=1
+ro.zygote.disable_gl_preload=true
