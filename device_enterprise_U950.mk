@@ -3,13 +3,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/zte/enterprise_U950/enterprise_U950-vendor.mk)
+$(call inherit-product-if-exists, vendor/zte/enterprise_V985/enterprise_V985-vendor.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/zte/enterprise_U950/overlay
+DEVICE_PACKAGE_OVERLAYS += device/zte/enterprise_V985/overlay
 
-LOCAL_PATH := device/zte/enterprise_U950
+LOCAL_PATH := device/zte/enterprise_V985
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -19,12 +19,12 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH := 480
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_enterprise_U950
-PRODUCT_DEVICE := enterprise_U950
+PRODUCT_NAME := full_enterprise_V985
+PRODUCT_DEVICE := enterprise_V985
 
 PRODUCT_PROPERTY_OVERRIDES := \
     drm.service.enabled=true \
@@ -34,9 +34,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 #ramdisk
 PRODUCT_COPY_FILES += \
-    device/zte/enterprise_U950/ramdisk/ueventd.enterprise_U950.rc:root/ueventd.tegra_enterprise.rc \
-    device/zte/enterprise_U950/ramdisk/init.enterprise_U950.usb.rc:root/init.tegra_enterprise.usb.rc \
-    device/zte/enterprise_U950/ramdisk/init.enterprise_U950.rc:root/init.tegra_enterprise.rc \
+    device/zte/enterprise_U950/ramdisk/ueventd.tegra_enterprise.rc:root/ueventd.tegra_enterprise.rc \
+    device/zte/enterprise_U950/ramdisk/init.tegra_enterprise.usb.rc:root/init.tegra_enterprise.usb.rc \
+    device/zte/enterprise_U950/ramdisk/init.tegra_enterprise.rc:root/init.tegra_enterprise.rc \
     device/zte/enterprise_U950/ramdisk/init.tf.rc:root/init.tf.rc \
     device/zte/enterprise_U950/ramdisk/fstab.tegra_enterprise:root/fstab.tegra_enterprise
 
@@ -89,14 +89,14 @@ PRODUCT_PACKAGES += \
 
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/zte/enterprise_U950/media_profiles.xml:system/etc/media_profiles.xml
+    device/zte/enterprise_V985/media_profiles.xml:system/etc/media_profiles.xml
 
 # media codec config xml file
 PRODUCT_COPY_FILES += \
-    device/zte/enterprise_U950/media_codecs.xml:system/etc/media_codecs.xml
+    device/zte/enterprise_V985/media_codecs.xml:system/etc/media_codecs.xml
 
 # audio policy configuration
 PRODUCT_COPY_FILES += \
-    device/zte/enterprise_U950/audio_effects.conf:system/etc/audio_effects.conf
+    device/zte/enterprise_V985/audio_effects.conf:system/etc/audio_effects.conf
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
