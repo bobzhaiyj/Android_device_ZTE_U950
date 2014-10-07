@@ -18,7 +18,7 @@ ifeq ($(TARGET_BOARD_PLATFORM),tegra)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := lights.enterprise_U950
+LOCAL_MODULE := lights.enterprise_V985
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
