@@ -1,17 +1,17 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/zte/enterprise_U950/BoardConfigVendor.mk
+-include vendor/zte/enterprise_V985/BoardConfigVendor.mk
 
 #Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/zte/enterprise_U950/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/zte/enterprise_V985/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 
 #ARCH
 TARGET_NO_RADIOIMAGE := true
-TARGET_BOOTLOADER_BOARD_NAME := enterprise_U950
+TARGET_BOOTLOADER_BOARD_NAME := enterprise_V985
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := tegra
 TARGET_TEGRA_VERSION := t30
@@ -37,11 +37,11 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1832910848
 BOARD_FLASH_BLOCK_SIZE := 1024
 
 TARGET_PROVIDES_INIT_TARGET_RC := true
-TARGET_PREBUILT_KERNEL := device/zte/enterprise_U950/kernel
+TARGET_PREBUILT_KERNEL := device/zte/enterprise_V985/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-TARGET_SPECIFIC_HEADER_PATH := device/zte/enterprise_U950/include
+TARGET_SPECIFIC_HEADER_PATH := device/zte/enterprise_V985/include
 
 #WIFI
 #BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -79,7 +79,7 @@ WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/vendor/firmware/bcm4330/fw
 
 
 #egl
-BOARD_EGL_CFG := device/zte/enterprise_U950/egl.cfg
+BOARD_EGL_CFG := device/zte/enterprise_V985/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 #TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -89,7 +89,7 @@ BOARD_NEEDS_OLD_HWC_API := true
 BOARD_EGL_NEEDS_LEGACY_FB := true
 
 #rild
-TARGET_PROVIDES_LIBRIL := vendor/zte/enterprise_U950/proprietary/lib/libztetd-ril.so
+TARGET_PROVIDES_LIBRIL := vendor/zte/enterprise_V985/proprietary/lib/libril-icera.so
 BOARD_RIL_NO_CELLINFOLIST := true
 
 ##audio
@@ -111,5 +111,5 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 # for old Recovery
 USE_SET_METADATA := false
 
-TARGET_RECOVERY_FSTAB := device/zte/enterprise_U950/ramdisk/fstab.tegra_enterprise
+TARGET_RECOVERY_FSTAB := device/zte/enterprise_V985/ramdisk/fstab.tegra_enterprise
 
