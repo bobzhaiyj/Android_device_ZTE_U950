@@ -20,6 +20,5 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-add_lunch_combo cm_enterprise_U950-userdebug
-add_lunch_combo cm_enterprise_U950-eng
-sh device/zte/enterprise_U950/patch/applypatch.sh
+add_lunch_combo cm_enterprise_V985-userdebug
+add_lunch_combo cm_enterprise_V985-eng
