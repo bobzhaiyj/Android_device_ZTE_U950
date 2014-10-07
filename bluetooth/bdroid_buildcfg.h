@@ -17,6 +17,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "ZTE U950"
+#define BTM_DEF_LOCAL_NAME   "ZTE V985"
 
 #endif
